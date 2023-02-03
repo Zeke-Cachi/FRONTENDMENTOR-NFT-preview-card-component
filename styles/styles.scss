@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    height: 100vh;
+    background-color: #0D1A2D;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #15273F;
+    width: 23rem;
+    height: 37.5rem;
+    border-radius: 15px;
+    box-shadow: 
+        0px 35px 5px 15px #0c1729,
+        0px 45px 5px 30px #0c192c,
+        0px 15px 5px 30px #0c192c;
+}
+
+.no-view {
+    opacity: 0;
+}
+
+.bg-img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 15px;
+    margin: 1.5rem;
+    background-image: url(../img/image-equilibrium.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.bg-img:hover {
+    background-image: linear-gradient(hsl(178, 100%, 50%, .5), hsl(178, 100%, 50%, .5)), url(../img/image-equilibrium.jpg);
+    .no-view {
+        opacity: 1;
+    }
+}
+
+.bg-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.no-view {
+    opacity: 0;
+}
+
+.bg-img:hover, span:hover, h2:hover {
+    cursor: pointer;
+}
+
+
+
+h2, p {
+    font-family: 'Outfit', sans-serif;
+    margin: 0 1.5rem;
+}
+
+h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+h2:hover {
+    color: var(--cyan);
+}
+
+p {
+    color:hsl(215, 51%, 70%);
+    font-weight: 200;
+    font-size: 1.2rem;
+}
+
+body div p {
+    margin-bottom: 1.2rem;
+}
+
+.d-flex, .parent-d-flex {
+    display: flex;
+}
+
+.d-flex {
+    align-items: center;
+    justify-content: center;
+    flex-basis: 1;
+}
+
+.parent-d-flex {
+    justify-content: space-between;
+    margin: 0 1.2rem 1rem 1.5rem;
+}
+
+.cyan {
+    color: var(--cyan);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+
+.p-align {
+    margin: 0 0 0 .5rem;
+}
+
+.days-left {
+    font-weight: 400;
+    font-size: 1rem;
+    margin-right: 1.5rem;
+}
+
+hr {
+    width: 85%;
+    margin: 0 auto;
+    height: 0.09px;
+    background-color:hsl(216, 28%, 29%);
+    border: none;
+}
+
+.avatar {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 100%;
+}
+
+.small-letters {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+span {
+    color: white;
+}
+
+span:hover {
+    color: var(--cyan);
+}
+
+.p-top {
+    margin: 0.5rem 1.5rem 1rem;
+    justify-content: left;
+}
+
+.p-top p {
+    padding: 1rem 0 0 0;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 21rem;
+    }
+    .bg-img {
+        width: 18rem;
+        background-position: center;
+    }
+}
